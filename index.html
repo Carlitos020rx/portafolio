@@ -168,7 +168,8 @@
   .exp li strong{color:var(--fg);font-weight:600}
 
   /* skills */
-  .skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 18px}
+  .skills{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 18px}
+  @media (max-width:900px){.skills{grid-template-columns:repeat(3,minmax(0,1fr))}}
   @media (max-width:700px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media (max-width:480px){.skills{grid-template-columns:1fr}}
   .sk{border-top:2px solid var(--fg);padding-top:14px}
@@ -431,7 +432,9 @@
       <div class="sk"><h3>Diseño</h3><p>Figma, prototipado, diseño de interacción, accesibilidad</p></div>
       <div class="sk"><h3>Suite de Adobe</h3><p>Photoshop, Illustrator, Premiere Pro, After Effects</p></div>
       <div class="sk"><h3>Frontend</h3><p>React, Next.js, Angular, TypeScript, JavaScript, Tailwind CSS</p></div>
-      <div class="sk"><h3>Videojuegos y apps</h3><p>Unity, C#, Electron, Node.js</p></div>
+      <div class="sk"><h3>Backend</h3><p>Node.js, Python, APIs REST</p></div>
+      <div class="sk"><h3>Nube</h3><p>Cloudflare Pages y Workers, despliegue continuo desde GitHub</p></div>
+      <div class="sk"><h3>Videojuegos y apps</h3><p>Unity, C#, Electron</p></div>
       <div class="sk"><h3>IA para diseño y código</h3><p>Claude Code, Claude Design, Google Stitch</p></div>
       <div class="sk"><h3>Medición</h3><p>Google Ads, Google Tag Manager, GA4 · Inglés B2</p></div>
     </div>
