@@ -156,6 +156,17 @@
   .c-ac .sw{display:grid;grid-template-columns:repeat(5,1fr);height:38px;border-radius:8px;overflow:hidden}
   .c-ac .ok{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:4px;background:#111;color:#fff}
 
+  /* Automatización Excel: hoja de cálculo con fórmula */
+  .c-xl{background:#DFF1E5}
+  .c-xl .sheet{width:78%;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 14px 30px -18px rgba(16,80,40,.55);font:500 9.5px var(--mono);color:#2b3a30}
+  .c-xl .fx{display:flex;gap:8px;align-items:center;padding:7px 10px;border-bottom:1px solid #E3E8E4;background:#F6F8F6}
+  .c-xl .fx b{font-style:italic;color:#107C41}
+  .c-xl .cells{display:grid;grid-template-columns:22px repeat(4,1fr)}
+  .c-xl .cells span{height:19px;border-right:1px solid #EEF1EE;border-bottom:1px solid #EEF1EE;padding:3px 5px;white-space:nowrap;overflow:hidden}
+  .c-xl .cells .hd{background:#F1F4F1;color:#7b857e;text-align:center}
+  .c-xl .cells .on{background:#E3F4E9;outline:2px solid #107C41;outline-offset:-2px}
+  .c-xl .bolt{position:absolute;right:10%;bottom:12%;background:#107C41;color:#fff;font:600 11px var(--body);padding:6px 11px;border-radius:999px;box-shadow:0 10px 22px -12px rgba(16,124,65,.8)}
+
   /* Tour UAO: árbol de decisiones */
   .c-tu{background:#DDF3E8}
   .c-tu svg{width:86%;height:86%}
@@ -227,10 +238,10 @@
         <h2>Proyectos</h2>
       </div>
       <div class="filters" role="group" aria-label="Filtrar proyectos">
-        <button type="button" id="f-todos" data-f="todos" aria-pressed="true">Todos<span class="n">9</span></button>
+        <button type="button" id="f-todos" data-f="todos" aria-pressed="true">Todos<span class="n">10</span></button>
         <button type="button" id="f-juegos" data-f="juegos" aria-pressed="false">Videojuegos<span class="n">2</span></button>
         <button type="button" id="f-dev" data-f="dev" aria-pressed="false">Desarrollo<span class="n">4</span></button>
-        <button type="button" id="f-diseno" data-f="diseno" aria-pressed="false">Diseño UX/UI<span class="n">3</span></button>
+        <button type="button" id="f-diseno" data-f="diseno" aria-pressed="false">Diseño UX/UI<span class="n">4</span></button>
       </div>
     </div>
 
@@ -382,7 +393,30 @@
         </div>
       </article>
 
-      <article class="card feature" data-cat="diseno">
+      <article class="card" data-cat="diseno">
+        <div class="cover c-xl" aria-hidden="true">
+          <div class="sheet">
+            <div class="fx"><b>fx</b>=SUMAR.SI(B:B;"Pagado";C:C)</div>
+            <div class="cells">
+              <span class="hd"></span><span class="hd">A</span><span class="hd">B</span><span class="hd">C</span><span class="hd">D</span>
+              <span class="hd">1</span><span>Cliente</span><span>Estado</span><span>Monto</span><span>Total</span>
+              <span class="hd">2</span><span>Norte S.A.</span><span>Pagado</span><span>1.200</span><span class="on">3.450</span>
+              <span class="hd">3</span><span>Grupo Sur</span><span>Pendiente</span><span>980</span><span></span>
+              <span class="hd">4</span><span>Andes Ltda.</span><span>Pagado</span><span>2.250</span><span></span>
+            </div>
+          </div>
+          <span class="bolt">⚡ Automatizado</span>
+        </div>
+        <div class="body">
+          <div class="kind">Landing page · Figma</div>
+          <h3>Automatización de Excel</h3>
+          <p>Landing page para una empresa que automatiza procesos en Excel, pensada para explicar el servicio de forma clara y llevar al visitante a solicitar una cotización.</p>
+          <div class="tags"><span>Figma</span><span>UX/UI</span><span>Landing page</span></div>
+          <div class="links"><a href="https://www.figma.com/design/To0pspo3EW047EgxniNjSB/Automatizaci%C3%B3n-de-exel--Copy-?m=auto" target="_blank" rel="noopener">Ver en Figma ↗</a></div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="diseno">
         <div class="cover c-tu" aria-hidden="true">
           <svg viewBox="0 0 300 180">
             <g stroke="#1F6B4A" stroke-width="2" fill="none">
