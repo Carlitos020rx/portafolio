@@ -82,6 +82,7 @@
   @media (max-width:620px){.grid{grid-template-columns:1fr}}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s, box-shadow .25s, border-color .25s}
   .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(20,22,40,.45);border-color:var(--accent)}
+  .card[hidden]{display:none}
   .card.feature{grid-column:span 2}
   @media (max-width:620px){.card.feature{grid-column:auto}}
   .cover{position:relative;aspect-ratio:16/10;max-width:100%;overflow:hidden;display:grid;place-items:center}
